@@ -1,14 +1,56 @@
-.skill-progress {
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    height: 100%;
-    width: 0; /* Start at 0 for animation */
-    transition: width 1s ease-out;
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--color-light); /* Màu nền đan xen với About */
 }
 
-/* Add class 'animate' via JS when in viewport */
-.skill-progress.animate { width: 95%; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+}
+
+/* Chia 2 cột cho Desktop */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-name {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+/* Lớp vỏ của thanh kỹ năng */
 .skill-bar {
     background: #e2e8f0;
     border-radius: 10px;
+    height: 12px;
     overflow: hidden;
+    width: 100%;
+}
+
+/* Lớp lõi chạy hiệu ứng */
+.skill-progress {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    height: 100%;
+    width: 0; /* Bắt đầu từ 0 để có thể animate */
+    border-radius: 10px;
+    transition: width 1s ease-out; /* Animation width trong 1 giây */
+}
+
+/* =========================================
+Responsive Skills Section (< 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột trên điện thoại */
+    }
 }
