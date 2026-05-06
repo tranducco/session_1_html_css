@@ -73,3 +73,11 @@ button.cta-button {
     width: 100%; /* Nút kéo dài toàn bộ form */
     font-size: 1.1rem;
 }
+/* --- Responsive Contact --- */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Gộp thành 1 cột */
+        padding: 2rem;
+        gap: 2rem;
+    }
+}

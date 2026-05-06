@@ -53,3 +53,11 @@
     color: #94a3b8;
     font-size: 0.9rem;
 }
+
+/* --- Responsive Footer --- */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Gộp thành 1 cột */
+        gap: 1.5rem;
+    }
+}
